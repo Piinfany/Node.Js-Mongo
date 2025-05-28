@@ -19,5 +19,5 @@ index.js คือ ไฟล์หลักของแอปพลิเคช�
 // git add .
 // git commit -m "Initial commit"
 // git branch -M main
-// git remote add origin https://github.com/Piinfany/Node.JS-My-SQL
+// git remote add origin https://github.com/Piinfany/Node.Js-Mongo
 // git push -u origin main or  git push -u origin main --force  
