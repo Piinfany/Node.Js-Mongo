@@ -48,7 +48,7 @@ app.get('/login', redirectlfAuth, loginController); // กำหนดให้ 
 app.get('/register', redirectlfAuth, registerController); // กำหนดให้ express ใช้ registerController เพื่อจัดการการลงทะเบียนของผู้ใช้ โดยใช้ method get ของ express
 app.post('/user/register', redirectlfAuth, storeUserController); // กำหนดให้ express ใช้ storeController เพื่อจัดการการรับข้อมูลผู้ใช้ที่ลงทะเบียน โดยใช้ method post ของ express
 app.post('/user/login', redirectlfAuth, loginUserController); // กำหนดให้ express ใช้ loginUserController เพื่อจัดการการล็อกอินของผู้ใช้ โดยใช้ method post ของ express
-app.get('/logout', redirectlfAuth, logoutController); // กำหนดให้ express ใช้ logoutController เพื่อจัดการการออกจากระบบของผู้ใช้ โดยใช้ method get ของ express
+app.get('/logout', redirectlfAuth); // กำหนดให้ express ใช้ logoutController เพื่อจัดการการออกจากระบบของผู้ใช้ โดยใช้ method get ของ express
 
 app.listen(3000, () => { // เริ่มต้นเซิร์ฟเวอร์ที่พอร์ต 3000 และแสดงข้อความเมื่อเซิร์ฟเวอร์เริ่มทำงาน
   console.log('Server is running on http://localhost:3000'); // แสดงข้อความว่าเซิร์ฟเวอร์กำลังทำงานที่ URL นี้
