@@ -37,7 +37,7 @@ app.use(expressSession({ // กำหนดให้ express ใช้ express-s
     secret: "node secret" // เป็น คีย์ลับ สำหรับ “เซ็น” session cookie (ป้องกันการถูกแก้ไขจากฝั่ง client)
 })); 
 app.use('/', (req, res, next) => { // กำหนด middleware ที่จะทำงานก่อนทุกเส้นทาง
-    loggedIn = req.session.userID; // เก็บ userID จาก session ลงในตัวแปร global.loggedIn ซึ่งจะใช้ในการตรวจสอบสถานะการล็อกอินของผู้ใช้
+    global.loggedIn = req.session.userID; // เก็บ userID จาก session ลงในตัวแปร global.loggedIn ซึ่งจะใช้ในการตรวจสอบสถานะการล็อกอินของผู้ใช้
     next(); // เรียกใช้ next() เพื่อดำเนินการต่อไปยัง middleware ถัดไป
 }); // ใช้ middleware เพื่อเก็บ userID จาก session ลงในตัวแปร global.loggedIn ซึ่งจะใช้ในการตรวจสอบสถานะการล็อกอินของผู้ใช้
 app.set('view engine', 'ejs'); // แอปนี้จะใช้ ejs (Embedded JavaScript) เป็น template engine ในการเรนเดอร์หน้าเว็บ
