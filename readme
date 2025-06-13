@@ -4,6 +4,9 @@ npm init -y
 ติดตั้งแพคเกตที่ต้องการใช้งาน
 npm i express nodemon express-session mongoose ejs connect-flash bcrypt
 
+สำหรับ run project
+npm run start หรือ node index.js  or npm start
+
 code แบบรูปแบบ MVC >> นั่นคือ Model View Controller ซึ่งเป็นรูปแบบการเขียนโปรแกรมที่ช่วยให้โค้ดของเรามีความชัดเจนและแยกส่วนได้ดีขึ้น
 models คือ ส่วนที่จัดการกับข้อมูล เช่น การเชื่อมต่อฐานข้อมูล การดึงข้อมูล หรือการบันทึกข้อมูล
 view คือ ส่วนที่แสดงผลข้อมูลให้ผู้ใช้เห็น เช่น หน้าเว็บเพจที่เราสร้างขึ้น
